@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import profilePic from '../assets/images/yfprofile.jpg'
+import { FaArrowAltCircleDown, FaArrowDown } from 'react-icons/fa';
+import Link from 'next/link';
 
 
 function Header() {
@@ -18,27 +20,34 @@ function Header() {
 
                     <div className={`flex flex-col gap-5 align-middle justify-between`}>
                         <h2 className={`text-4xl font-light text-gray-200 `}>Software Engineer & UI/UX Designer</h2>
-                        
+
                         <div>
 
-                        <h2 className={`text-5xl font-extrabold text-gray-200 mb-4`}>Who Am I?</h2>
-                        <div className="text-sm">
-                            I am a US based software engineer graduated from Iowa State University.
-                            I have a passion for creating innovative solutions to complex problems and have worked on a variety of projects.
+                            <h2 className={`text-5xl font-extrabold text-gray-200 mb-4`}>Who Am I?</h2>
+                            <div className="text-sm">
+                                I am a US based software engineer graduated from Iowa State University.
+                                I have a passion for creating innovative solutions to complex problems and have worked on a variety of projects.
+                            </div>
                         </div>
-                        </div>
-                        <button className={`bg-black p-3 w-72 py-4 text-sm text-gray-200 rounded-md  font-bold`}>Download my resume</button>
+
+                        <Link href={'../assets/files/YF-redone-Resume.pdf'} target='_blank' download>
+                        
+                        <div className={`bg-[#101010] hover:bg-blue-600 transition-all duration-500 cursor-pointer  w-64 p-6 text-sm text-gray-200 rounded-md font-semibold flex flex-row gap-4 justify-center align-middle`}>
+                                <p>Download my resume</p>
+                                <FaArrowAltCircleDown size={20} />
+                            </div>
+                            </Link>
+
                     </div>
 
-                   
-                        <Image
-                            className={`rounded-full border-8 m-1 sm:m-2`}
-                            width={500}
-                            height={500}
-                            alt={`Yannick Slash Fumukani`}
-                            src={profilePic}
-                        />
-                    
+                    <Image
+                        className={`rounded-full border-8 m-1 sm:m-2`}
+                        width={500}
+                        height={500}
+                        alt={`Yannick Slash Fumukani`}
+                        src={profilePic}
+                    />
+
                 </div>
             </div>
 

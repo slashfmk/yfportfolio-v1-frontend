@@ -4,10 +4,16 @@ import Section from './components/Section'
 import { Suspense } from 'react';
 import GitCard from './components/GitCard';
 
-import { FaDeskpro, FaDesktop, FaEye, FaFirefoxBrowser, FaGlobeAfrica, FaLaptop, FaMobile, FaPhone, FaPhoneSquare } from "react-icons/fa";
+import { FaAndroid, FaAngular, FaApple, FaChrome, FaCss3, FaDeskpro, FaDesktop, FaEye, FaFirefoxBrowser, FaGlobeAfrica, FaHtml5, FaInternetExplorer, FaLaptop, FaLinux, FaMobile, FaPhone, FaPhoneSquare, FaReact, FaSafari, FaSass, FaWindows } from "react-icons/fa";
 import Card from './components/Card';
 import Service from './components/Service';
 import Footer from './components/Footer';
+
+import projects from './assets/files/project.json';
+import proficiency from './assets/files/proficiency.json';
+
+import LineProgress from './LineProgress';
+import Classifier from './components/Classifier';
 
 
 async function getData() {
@@ -21,43 +27,8 @@ async function getData() {
 }
 
 // Mockup data
-const thingsBuilt = [
-
-  {
-    id: 1,
-    title: "Cinema",
-    image: "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    url: "www.google.com",
-    detail: "Some details",
-    technology: "ReactJs, Springboot, Tailwinds"
-  },
-  {
-    id: 2,
-    title: "Cool stuff",
-    image: "https://images.pexels.com/photos/242492/pexels-photo-242492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    url: "#",
-    detail: "Some details",
-    technology: "ReactJs, Springboot, Tailwinds"
-  },
-  {
-    id: 3,
-    title: "Crazy ass",
-    image: "https://images.pexels.com/photos/2142424/pexels-photo-2142424.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    url: "www.snipper.com",
-    detail: "Some details",
-    technology: "ReactJs, Springboot, Tailwinds"
-  },
-  {
-    id: 4,
-    title: "Women Webapp",
-    image: "https://images.pexels.com/photos/3762806/pexels-photo-3762806.jpeg",
-    url: "#",
-    detail: "Some details",
-    technology: "ReactJs, Springboot, Tailwinds"
-  },
-
-]
-
+const thingsBuilt = projects;
+const proficiencyData = proficiency;
 
 export default async function Home() {
 
@@ -73,19 +44,51 @@ export default async function Home() {
       <Section
         title={'Things I build'}
         description={`I build things that make people's lives easier`}>
-        
-        <div className={`flex flex-row justify-between gap-6 flex-wrap`}>
+
+        <div className={`flex flex-row justify-between bg-[#101010] p-10 pt-16 rounded-lg gap-6 flex-wrap`}>
 
           {/* What we build */}
-          <Service title={'Web App'} icon={<FaFirefoxBrowser size={100} />} >
+          <Service
+            title={'Web App'}
+            icon={<FaFirefoxBrowser size={50} />}
+
+            details={
+              <div className={`flex flex-row justify-between align-middle z-10 relative top-[-45px]`}>
+                <FaReact size={50} className={`hover:text-blue-500 transition-all duration-500`} />
+                <FaAngular size={50} className={`hover:text-red-700 transition-all duration-500`} />
+                <FaHtml5 size={50} className={`hover:text-orange-600 transition-all duration-500`} />
+                <FaSass size={50} className={`hover:text-pink-700 transition-all duration-500`} />
+              </div>
+            }>
+
             I create web based app for frontend and backend with a variety of tech stacks.
           </Service>
 
-          <Service title={'Mobile App'} icon={<FaMobile size={100} />} >
+          <Service
+            title={'Mobile App'}
+            icon={<FaMobile size={50} />}
+
+            details={
+              <div className={`flex flex-row gap-3 justify-between align-middle z-10 relative top-[-45px]`}>
+                <FaApple size={50} className={`hover:text-gray-500 transition-all duration-500`} />
+                <FaAndroid size={50} className={`hover:text-green-500 transition-all duration-500`} />
+                <FaReact size={50} className={`hover:text-blue-500 transition-all duration-500`} />
+              </div>
+            }>
             I create native Mobile based app that run on both Android and IOS platform.
           </Service>
 
-          <Service title={'Desktop'} icon={<FaLaptop size={100} />} >
+          <Service
+            title={'Desktop'}
+            icon={<FaLaptop size={50} />}
+            details={
+              <div className={`flex flex-row justify-between align-middle z-10 relative top-[-45px]`}>
+                <FaWindows size={50} className={`hover:text-blue-500 transition-all duration-500`} />
+                <FaApple size={50} className={`hover:text-gray-500 transition-all duration-500`} />
+                <FaLinux size={50} className={`hover:text-orange-500 transition-all duration-500`} />
+              </div>
+            }
+          >
             I create native apps that run on windows, Mac Osx, and Linux Operating System
           </Service>
 
@@ -97,12 +100,50 @@ export default async function Home() {
         title={'My Skills'}
         description={`My technical skills include proficiency in a range of programming languages, as well as experience  with a variety of tools and frameworks.`}>
 
+        <div className={`flex flex-row gap-3 w-full flex-wrap`}>
+
+          <Classifier title={'Programming languages'} >
+            <ul className={`w-full`}>
+              {
+                proficiencyData.languages.sort((a, b) => (a.percentage > b.percentage) ? -1 : 1).map((language: any) =>
+                  <li key={language.id}>
+                    <LineProgress key={language.id} percentage={language.percentage} title={language.name} />
+                  </li>)
+              }
+            </ul>
+          </Classifier>
+
+
+          <Classifier title={'Frameworks'} >
+            <ul className={`w-full`}>
+              {
+                proficiencyData.frameworks.sort((a, b) => (a.percentage > b.percentage) ? -1 : 1).map((language: any) =>
+                  <li key={language.id}>
+                    <LineProgress key={language.id} percentage={language.percentage} title={language.name} />
+                  </li>)
+              }
+            </ul>
+          </Classifier>
+
+
+          <Classifier title={`Tools and Platforms`} >
+            <ul className={`w-full`}>
+              {
+                proficiencyData.tools.sort((a, b) => (a.percentage > b.percentage) ? -1 : 1).map((language: any) =>
+                  <li key={language.id}>
+                    <LineProgress key={language.id} percentage={language.percentage} title={language.name} />
+                  </li>)
+              }
+            </ul>
+          </Classifier>
+
+        </div>
 
       </Section>
 
 
       <Section
-        title={'Some things I have built'}
+        title={'Projects I have built'}
         description={`Some of the work my hands can do`}
       >
 
@@ -134,6 +175,7 @@ export default async function Home() {
               id={repo.id}
               name={repo.name}
               url={repo.html_url}
+              description={repo.description}
               language={repo.language}
             />)}
           </Suspense>
