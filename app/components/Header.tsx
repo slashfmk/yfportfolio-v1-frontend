@@ -18,11 +18,14 @@ function Header() {
 
                     <div className={`flex flex-col gap-5 align-middle justify-between`}>
                         <h2 className={`text-4xl font-light text-gray-200 `}>Software Engineer & UI/UX Designer</h2>
-                        <h2 className={`text-5xl font-extrabold text-gray-200`}>Who Am I?</h2>
+                        
+                        <div>
 
+                        <h2 className={`text-5xl font-extrabold text-gray-200 mb-4`}>Who Am I?</h2>
                         <div className="text-sm">
                             I am a US based software engineer graduated from Iowa State University.
                             I have a passion for creating innovative solutions to complex problems and have worked on a variety of projects.
+                        </div>
                         </div>
                         <button className={`bg-black p-3 w-72 py-4 text-sm text-gray-200 rounded-md  font-bold`}>Download my resume</button>
                     </div>
