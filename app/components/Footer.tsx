@@ -9,7 +9,9 @@ function Footer() {
 
     return (
 
-        <section className={`w-full flex justify-center bg-[#101010] mb-0 pt-11`}>
+        <section
+        id={`footer`}
+            className={`w-full flex justify-center bg-[#101010] mb-0 pt-11`}>
 
             <div className={`w-[1080px] mb-10 px-3 sm:px-0`}>
 

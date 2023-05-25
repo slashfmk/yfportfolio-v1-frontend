@@ -7,7 +7,7 @@ import Link from 'next/link';
 function Header() {
     return (
 
-        <header className={`w-full flex justify-center px-6 sm:px-0`}>
+        <header className={`w-full flex justify-center px-6 sm:px-0`} id={`header`}>
 
             <div className={`w-[1080px] mb-8`}>
 

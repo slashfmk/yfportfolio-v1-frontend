@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 
 import projects from './assets/files/project.json';
 import proficiency from './assets/files/proficiency.json';
+import testimony from './assets/files/testimony.json';
 
 import LineProgress from './LineProgress';
 import Classifier from './components/Classifier';
@@ -29,6 +30,7 @@ async function getData() {
 // Mockup data
 const thingsBuilt = projects;
 const proficiencyData = proficiency;
+const testimonyData = testimony;
 
 export default async function Home() {
 
@@ -42,6 +44,7 @@ export default async function Home() {
       <Header />
 
       <Section
+        id={`thingsibuild`}
         title={'Things I build'}
         description={`I build things that make people's lives easier`}>
 
@@ -97,6 +100,7 @@ export default async function Home() {
 
 
       <Section
+        id={`skills`}
         title={'My Skills'}
         description={`My technical skills include proficiency in a range of programming languages, as well as experience  with a variety of tools and frameworks.`}>
 
@@ -143,6 +147,7 @@ export default async function Home() {
 
 
       <Section
+        id={`projects`}
         title={'Projects I have built'}
         description={`Some of the work my hands can do`}
       >
@@ -165,6 +170,7 @@ export default async function Home() {
       </Section>
 
       <Section
+        id={`repos`}
         title={'Github repos'}
         description={`These are some of my public repos`}
       >
@@ -184,13 +190,60 @@ export default async function Home() {
       </Section>
 
       <Section
+        id={`testimony`}
         title={'Testimony'}
-        description={`Introductory sentence`}
+        description={`Trusted by many of people That I have worked with`}
       >
+
+        <div className={`flex flex-col gap-12 rounded-xl`}>
+
+          <ul className={`flex flex-row self-center p-3 w-max rounded-full`}>
+            {
+              testimony.map((testy: any) =>
+                <li key={testy.id}>
+                  <div className={`relative mr-[-1.5rem] hover:z-10 hover:scale-150 duration-700 transition-all`}>
+                    <Image
+                      key={testy.id}
+                      src={`/photos/${testy.photo}`}
+                      width={60} height={60} alt={''}
+                      className={`rounded-full border-4 border-[#171717]`} />
+                  </div>
+                </li>)
+            }
+          </ul>
+
+          <div
+            className={`flex flex-col gap-4 text-white
+          bg-gradient-to-r from-[#0da3f6] to-[#06d967]
+          rounded- bg-black w-full justify-center align-middle py-7`}>
+
+            <p className="text-center text-3xl font-bold">&ldquo;
+              {` Most wonderful Experience with the result I got from Yannick work `}
+              &rdquo;
+            </p>
+
+            <div className={`self-center`}>
+              <Image
+                src={`/photos/5.jpg`}
+                width={150} height={150}
+                alt={`Cool stuff`}
+                className={`rounded-full border-gray-300 border-8`} />
+            </div>
+
+            <div>
+              <h2 className="text-sm text-center">{`Brinette Lohombo`}</h2>
+              <h2 className="text-lg text-center font-bold">{`Naskad`}</h2>
+            </div>
+
+          </div>
+
+
+        </div>
 
       </Section>
 
       <Section
+        id={`contact`}
         title={'Contact me'}
         description={`Shoot me a message, so we can work together on anything you have`}
       >
