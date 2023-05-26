@@ -64,42 +64,42 @@
 
   "frameworks": [
     {
-      "id": 1,
+      "id": 12,
       "name": "ReactJS",
       "percentage": 99
     },
     {
-      "id": 2,
+      "id": 13,
       "name": "NextJS",
       "percentage": 99
     },
     {
-      "id": 3,
+      "id": 14,
       "name": "React Native",
       "percentage": 97
     },
     {
-      "id": 4,
+      "id": 15,
       "name": "SwiftUI",
       "percentage": 81
     },
     {
-      "id": 5,
+      "id": 16,
       "name": "Springboot",
       "percentage": 89
     },
     {
-      "id": 6,
+      "id": 17,
       "name": "DotNet",
       "percentage": 70
     },
     {
-      "id": 7,
+      "id": 18,
       "name": "NodeJS",
       "percentage": 95
     },
     {
-      "id": 8,
+      "id": 19,
       "name": "Flask",
       "percentage": 35
     }
@@ -107,37 +107,37 @@
 
   "tools": [
     {
-      "id": 1,
+      "id": 20,
       "name": "Docker",
       "percentage": 90
     },
     {
-      "id": 2,
+      "id": 21,
       "name": "Linux",
       "percentage": 85
     },
     {
-      "id": 3,
+      "id": 22,
       "name": "AWS",
       "percentage": 71
     },
     {
-      "id": 4,
+      "id": 23,
       "name": "Figma",
       "percentage": 92
     },
     {
-      "id": 5,
+      "id": 24,
       "name": "Photoshop",
       "percentage": 92
     },
     {
-      "id": 6,
+      "id": 25,
       "name": "Illustrator",
       "percentage": 69
     },
     {
-      "id": 7,
+      "id": 26,
       "name": "After Effect",
       "percentage": 50
     }

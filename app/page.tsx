@@ -4,7 +4,7 @@ import Section from './components/Section'
 import { Suspense } from 'react';
 import GitCard from './components/GitCard';
 
-import { FaAndroid, FaAngular, FaApple, FaChrome, FaCss3, FaDeskpro, FaDesktop, FaEye, FaFirefoxBrowser, FaGlobeAfrica, FaHtml5, FaInternetExplorer, FaLaptop, FaLinux, FaMobile, FaPhone, FaPhoneSquare, FaReact, FaSafari, FaSass, FaWindows } from "react-icons/fa";
+import { FaAndroid, FaAngular, FaApple, FaFirefoxBrowser, FaHtml5, FaLaptop, FaLinux, FaMobile, FaReact, FaSafari, FaSass, FaWindows } from "react-icons/fa";
 import Card from './components/Card';
 import Service from './components/Service';
 import Footer from './components/Footer';
@@ -46,6 +46,7 @@ export default async function Home() {
       <Section
         id={`thingsibuild`}
         title={'Things I build'}
+        position={`left`}
         description={`I build things that make people's lives easier`}>
 
         <div className={`flex flex-row justify-between bg-[#101010] p-10 pt-16 rounded-lg gap-6 flex-wrap`}>
@@ -53,7 +54,7 @@ export default async function Home() {
           {/* What we build */}
           <Service
             title={'Web App'}
-            icon={<FaFirefoxBrowser size={50} />}
+            icon={<FaSafari size={50} />}
 
             details={
               <div className={`flex flex-row justify-between align-middle z-10 relative top-[-45px]`}>
@@ -102,6 +103,7 @@ export default async function Home() {
       <Section
         id={`skills`}
         title={'My Skills'}
+        position={`right`}
         description={`My technical skills include proficiency in a range of programming languages, as well as experience  with a variety of tools and frameworks.`}>
 
         <div className={`flex flex-row gap-3 w-full flex-wrap`}>
@@ -110,8 +112,8 @@ export default async function Home() {
             <ul className={`w-full`}>
               {
                 proficiencyData.languages.sort((a, b) => (a.percentage > b.percentage) ? -1 : 1).map((language: any) =>
-                  <li key={language.id}>
-                    <LineProgress key={language.id} percentage={language.percentage} title={language.name} />
+                  <li key={language.id * 76}>
+                    <LineProgress key={language.id * 66} percentage={language.percentage} title={language.name} />
                   </li>)
               }
             </ul>
@@ -122,8 +124,8 @@ export default async function Home() {
             <ul className={`w-full`}>
               {
                 proficiencyData.frameworks.sort((a, b) => (a.percentage > b.percentage) ? -1 : 1).map((language: any) =>
-                  <li key={language.id}>
-                    <LineProgress key={language.id} percentage={language.percentage} title={language.name} />
+                  <li key={language.id * 78}>
+                    <LineProgress key={language.id * 79} percentage={language.percentage} title={language.name} />
                   </li>)
               }
             </ul>
@@ -134,8 +136,8 @@ export default async function Home() {
             <ul className={`w-full`}>
               {
                 proficiencyData.tools.sort((a, b) => (a.percentage > b.percentage) ? -1 : 1).map((language: any) =>
-                  <li key={language.id}>
-                    <LineProgress key={language.id} percentage={language.percentage} title={language.name} />
+                  <li key={language.id * 93}>
+                    <LineProgress key={language.id * 34} percentage={language.percentage} title={language.name} />
                   </li>)
               }
             </ul>
@@ -149,6 +151,7 @@ export default async function Home() {
       <Section
         id={`projects`}
         title={'Projects I have built'}
+        position={`left`}
         description={`Some of the work my hands can do`}
       >
 
@@ -157,7 +160,7 @@ export default async function Home() {
             thingsBuilt.map((item: any) =>
               <Card
                 id={item.id}
-                key={item.id}
+                key={item.id * 30}
                 title={item.title}
                 description={item.description}
                 image_url={item.image}
@@ -172,12 +175,13 @@ export default async function Home() {
       <Section
         id={`repos`}
         title={'Github repos'}
+        position={`right`}
         description={`These are some of my public repos`}
       >
         <div className={`flex flex-row gap-1 flex-wrap align-middle justify-between`}>
           <Suspense fallback={<div>Loading repos ...</div>}>
             {reposData.filter((rp: any) => !rp.fork).map((repo: any) => <GitCard
-              key={repo.id}
+              key={repo.id * 22}
               id={repo.id}
               name={repo.name}
               url={repo.html_url}
@@ -192,6 +196,7 @@ export default async function Home() {
       <Section
         id={`testimony`}
         title={'Testimony'}
+        position={`left`}
         description={`Trusted by many of people That I have worked with`}
       >
 
@@ -200,10 +205,10 @@ export default async function Home() {
           <ul className={`flex flex-row self-center p-3 w-max rounded-full`}>
             {
               testimony.map((testy: any) =>
-                <li key={testy.id}>
+                <li key={testy.id * 122}>
                   <div className={`relative mr-[-1.5rem] hover:z-10 hover:scale-150 duration-700 transition-all`}>
                     <Image
-                      key={testy.id}
+                      key={testy.id * 88}
                       src={`/photos/${testy.photo}`}
                       width={60} height={60} alt={''}
                       className={`rounded-full border-4 border-[#171717]`} />
@@ -215,7 +220,7 @@ export default async function Home() {
           <div
             className={`flex flex-col gap-4 text-white
           bg-gradient-to-r from-[#0da3f6] to-[#06d967]
-          rounded- bg-black w-full justify-center align-middle py-7`}>
+          rounded-lg bg-black w-full justify-center align-middle py-7`}>
 
             <p className="text-center text-3xl font-bold">&ldquo;
               {` Most wonderful Experience with the result I got from Yannick work `}
@@ -245,6 +250,7 @@ export default async function Home() {
       <Section
         id={`contact`}
         title={'Contact me'}
+        position={`right`}
         description={`Shoot me a message, so we can work together on anything you have`}
       >
 
