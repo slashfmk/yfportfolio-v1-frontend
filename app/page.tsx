@@ -15,6 +15,8 @@ import testimony from './assets/files/testimony.json';
 
 import LineProgress from './LineProgress';
 import Classifier from './components/Classifier';
+import CardXlCarousel from './components/CardXlCarousel';
+import CardXl from './components/CardXl';
 
 
 async function getData() {
@@ -217,31 +219,16 @@ export default async function Home() {
             }
           </ul>
 
-          <div
-            className={`flex flex-col gap-4 text-white
-          bg-gradient-to-r from-[#0da3f6] to-[#06d967]
-          rounded-lg bg-black w-full justify-center align-middle py-7`}>
+          <CardXlCarousel>
 
-            <p className="text-center text-3xl font-bold">&ldquo;
-              {` Most wonderful Experience with the result I got from Yannick work `}
-              &rdquo;
-            </p>
+            {
+              testimonyData.map((testy: any) =>
+                <CardXl key={testy.id * 1050} photoUrl={`/photos/${testy.photo}`} author={testy.author} company={testy.company}>
+                  {testy.comment}
+                </CardXl>)
+            }
 
-            <div className={`self-center`}>
-              <Image
-                src={`/photos/5.jpg`}
-                width={150} height={150}
-                alt={`Cool stuff`}
-                className={`rounded-full border-gray-300 border-8`} />
-            </div>
-
-            <div>
-              <h2 className="text-sm text-center">{`Brinette Lohombo`}</h2>
-              <h2 className="text-lg text-center font-bold">{`Naskad`}</h2>
-            </div>
-
-          </div>
-
+          </CardXlCarousel>
 
         </div>
 

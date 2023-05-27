@@ -39,21 +39,28 @@ const LineProgress: React.FC<ILineProgress> = (props) => {
             <motion.div
                 
                 initial={{opacity: 0}}
-                animate={{ opacity: 1}}
+                animate={{ opacity: 1 }}
                 className={`w-full bg-transparent h-4 m-1`}>
                 
                 <motion.div
                      initial={{
-                        opacity: 0,
+                        opacity: 1,
                         width: 0,
                         backgroundColor: colorControl(0)
                     }}
     
-                    animate={{
+                    // animate={{
+                    //     opacity: 1,
+                    //     width: props.percentage + "%",
+                    //     backgroundColor: [colorControl(props.percentage)]
+                    // }}
+
+                    whileInView={{
                         opacity: 1,
                         width: props.percentage + "%",
-                        backgroundColor: [colorControl(props.percentage)]
                     }}
+    
+                    viewport={{ once: false, amount: 0.2 }}
 
                     transition={{
                         duration: 1,

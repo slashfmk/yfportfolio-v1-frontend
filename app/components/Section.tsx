@@ -14,13 +14,16 @@ interface ISection {
 
 function Section(props: ISection) {
 
-    const pos = props.position && props.position === 'left' ? `-100xpx` : `100px`;
+    const pos = () => {
+        if (!props.position) return `0px`;
+        return props.position === 'left' ? `-100xpx` : `100px`;
+    }
     
     return (
         <section className={`w-full flex justify-center my-16`} id={props.id}>
             <motion.div
                 
-                initial={{ opacity: 0, translateX: pos }}
+                initial={{ opacity: 0, translateX: pos() }}
                 whileInView={{ opacity: 1, translateX: '0px' }}
                 viewport={{ once: false, amount: 0.2 }}
 

@@ -5,7 +5,7 @@ import profilePic from '../assets/images/yfprofile.jpg'
 import { FaArrowAltCircleDown, FaBars, FaPlusCircle, FaWindows } from 'react-icons/fa';
 import Button from './Button';
 import ToTop from './ToTup';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AnimatePresence, delay, easeInOut, motion, stagger } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import PageProgressBar from './PageProgressBar';
@@ -26,6 +26,12 @@ function Header() {
     // Get the screen width
     const hasWindow = typeof window !== 'undefined';
     const width = hasWindow ? window.innerWidth : null;
+
+    useEffect(() => {
+
+
+    }, [width])
+
 
     return (
 
@@ -49,7 +55,6 @@ function Header() {
 
             <motion.div
                 className={`block fixed w-screen h-screen bg-green-500 z-30 text-white font-bold text-2xl`}
-                style={{}}
 
                 initial={{ opacity: 1, display: 'none', translateX: `${width}px` }}
                 transition={{ ease: "easeInOut", duration: .5 }}
@@ -60,30 +65,15 @@ function Header() {
                 exit={{ opacity: 1, display: 'none', translateX: `${width}px` }}>
 
                 <AnimatePresence >
-                    <motion.ul className={`flex flex-col gap-6 h-full justify-center text-center`}>
+                    <motion.ul className={`flex flex-col gap-6 h-full justify-center text-center main-menu`}>
 
-
-                        <motion.li
-                            className={`cursor-pointer`}
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: `auto` }}
-                            exit={{ opacity: 0, height: 0 }}
-                            key={77}
-                            onClick={() => { closeMenu("/#header") }}>Who Am I?</motion.li>
-
-                        <motion.li
-                            className={`cursor-pointer`}
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: `auto` }}
-                            exit={{ opacity: 0, height: 0 }}
-                            key={2} onClick={() => { closeMenu("/#thingsibuild") }}>Things I build</motion.li>
-
-                        <motion.li key={33} onClick={() => { closeMenu("/#skills") }}>My Skills</motion.li>
-                        <motion.li key={34} onClick={() => { closeMenu("/#projects") }}>Projects</motion.li>
-                        <motion.li key={35} onClick={() => { closeMenu("/#repos") }}>Github repos</motion.li>
-                        <motion.li key={36} onClick={() => { closeMenu("/#testimony") }}>Testimony</motion.li>
-                        <motion.li key={37} onClick={() => { closeMenu("/#contact") }}>Contacts</motion.li>
-
+                        <li key={77} onClick={() => { closeMenu("/#header") }}>Who Am I?</li>
+                        <li key={32} onClick={() => { closeMenu("/#thingsibuild") }}>Things I build</li>
+                        <li key={33} onClick={() => { closeMenu("/#skills") }}>My Skills</li>
+                        <li key={34} onClick={() => { closeMenu("/#projects") }}>Projects</li>
+                        <li key={35} onClick={() => { closeMenu("/#repos") }}>Github repos</li>
+                        <li key={36} onClick={() => { closeMenu("/#testimony") }}>Testimony</li>
+                        <li key={37} onClick={() => { closeMenu("/#contact") }}>Contacts</li>
 
                     </motion.ul>
                 </AnimatePresence>

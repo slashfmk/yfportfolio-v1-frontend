@@ -110,6 +110,23 @@ a {
   -webkit-text-stroke-width: 1px; 
 }
 
+.main-menu > li {
+  /* border-bottom: solid transparent 8px; */
+  display: inline-block;
+  padding: 0px 0px 4px 0px;
+  transform: translateX(0px);
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.main-menu > li:hover {
+  /* border-bottom: solid  #ffffff 8px; */
+  display: inline-block;
+  padding: 0px 0px 4px 0px;
+ transform: translateX(-25px);
+ transition: all .5s;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

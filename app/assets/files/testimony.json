@@ -1,26 +1,30 @@
 [
     {
         "id": 1,
-        "name": "Brinette",
+        "author": "Brinette",
         "photo": "1.jpg",
-        "comment": "Yannick knows his stuff, and I was very pleased with the work he did for me"
+        "comment": "Yannick knows his stuff, and I was very pleased with the work he did for me",
+        "company" : "Arklight"
     },
     {
         "id": 2,
-        "name": "Mohammed",
+        "author": "Mohammed",
         "photo": "2.jpg",
-        "comment": "Yannick knows his stuff, and I was very pleased with the work he did for me"
+        "comment": "Yannick knows his stuff, and I was very pleased with the work he did for me",
+        "company" : "Arklight"
     },
     {
         "id": 3,
-        "name": "Emmanuel",
+        "author": "Emmanuel",
         "photo": "3.jpg",
-        "comment": "Yannick knows his stuff, and I was very pleased with the work he did for me"
+        "comment": "Yannick knows his stuff, and I was very pleased with the work he did for me",
+        "company" : "Arklight"
     },
     {
         "id": 4,
-        "name": "Jaden",
+        "author": "Jaden",
         "photo": "4.jpg",
-        "comment": "Yannick knows his stuff, and I was very pleased with the work he did for me"
+        "comment": "Yannick knows his stuff, and I was very pleased with the work he did for me",
+        "company" : "Arklight"
     }
 ]

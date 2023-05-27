@@ -2,8 +2,6 @@
 "use client";
 
 import { useState } from "react";
-import { FaChevronCircleDown, FaEye } from "react-icons/fa";
-
 import { motion } from "framer-motion";
 
 
@@ -19,25 +17,33 @@ interface ICard {
 
 function Card(props: ICard) {
 
-    const [over, setOver] = useState<boolean>(false);
+    const [isHovered, setIsHovered] = useState<boolean>(false);
 
     return (
         <>
 
             <motion.div
-                onMouseOver={() => setOver(true)}
-                onMouseOut={() => setOver(false)}
+                onMouseOver={() => setIsHovered(true)}
+                onMouseOut={() => setIsHovered(false)}
 
                 className={`sm:w-[350px] bg-cover bg-center overflow-clip w-full h-52 rounded-lg mb-2`}
 
                 initial={{
                     backgroundSize: `100%`,
+                    scale: 0,
                     opacity: 1
                 }}
 
                 animate={
-                    over ? { backgroundSize: `200%` } : { backgroundSize: `100%` }
+                    isHovered ? { backgroundSize: `200%` } : { backgroundSize: `100%` }
                 }
+
+                whileInView={{
+                    opacity: 1,
+                    scale: 1
+                }}
+
+                viewport={{ once: false, amount: 0.2 }}
 
                 style={{
                     backgroundImage: `url(${props.image_url})`,
@@ -50,7 +56,7 @@ function Card(props: ICard) {
                     className={`w-full h-full flex flex-col justify-center text-slate-50`}
 
                     animate={
-                        over ?
+                        isHovered ?
                             { backgroundColor: `rgba(88, 95, 91, 0.62)` } :
                             { backgroundColor: `rgb(120, 30, 80, .7)` }}
                 >
@@ -64,7 +70,7 @@ function Card(props: ICard) {
                     <motion.p
                         
                         animate={
-                            over ? { translateY: `0px` } : { translateY: `5px` }
+                            isHovered ? { translateY: `0px` } : { translateY: `5px` }
                         }
 
                         className={`text-center text-xsm`}>
