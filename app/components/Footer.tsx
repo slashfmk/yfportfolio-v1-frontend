@@ -37,7 +37,7 @@ function Footer() {
 
                     <div className={`flex flex-row flex-wrap justify-between`}>
 
-                        <p> &copy;  Copyright 2023 - Yannick Slash Fumukani</p>
+                        <p> &copy;  Copyright 2023 - Designed and built by Yannick Fumukani</p>
 
                         <div className={`flex flex-row gap-3`}>
                             <FaGlobeAmericas size={19} />

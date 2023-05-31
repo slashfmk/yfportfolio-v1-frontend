@@ -1,18 +1,18 @@
 [
   {
     "id": 1,
-    "title": "Cinema",
+    "title": "Portfolio v.1",
     "image": "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "url": "www.google.com",
-    "detail": "Some details",
-    "technology": "ReactJs, Springboot, Tailwinds"
+    "description": "Portfolio V2.1 showcases my skills as a Software Engineer. The website includes different animations and is designed to be mobile-friendly.",
+    "technology": "NextJS, Tailwind CSS, and a Sanity CMC"
   },
   {
     "id": 2,
     "title": "Cool stuff",
     "image": "https://images.pexels.com/photos/242492/pexels-photo-242492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "url": "#",
-    "detail": "Some details",
+    "description": "Some details",
     "technology": "ReactJs, Springboot, Tailwinds"
   },
   {
@@ -20,7 +20,7 @@
     "title": "Crazy ass",
     "image": "https://images.pexels.com/photos/2142424/pexels-photo-2142424.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "url": "www.snipper.com",
-    "detail": "Some details",
+    "description": "This project has been developed to help people organize what they do on the daily basis",
     "technology": "ReactJs, Springboot, Tailwinds"
   },
   {
@@ -28,7 +28,7 @@
     "title": "Women Webapp",
     "image": "https://images.pexels.com/photos/3762806/pexels-photo-3762806.jpeg",
     "url": "#",
-    "detail": "Some details",
+    "description": "",
     "technology": "ReactJs, Springboot, Tailwinds"
   }
 ]

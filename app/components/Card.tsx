@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { FaChevronCircleDown, FaEye, FaGithub } from "react-icons/fa";
 
 
 interface ICard {
@@ -57,25 +58,38 @@ function Card(props: ICard) {
 
                     animate={
                         isHovered ?
-                            { backgroundColor: `rgba(88, 95, 91, 0.62)` } :
-                            { backgroundColor: `rgb(120, 30, 80, .7)` }}
-                >
+                            { backgroundColor: `rgba(0, 95, 91, 0.7)` } :
+                            { backgroundColor: `rgba(0, 0, 12, 0.4)` }}>
 
 
-                    {/* <FaEye size={30} className={`self-end`} /> */}
-                    <p className={`text-2xl font-bold text-center text-slate-200`}>{props.title}</p>
+                    <motion.div
 
-                    {props.url && <p className={`text-center`}>{props.url}</p>}
+                        animate={isHovered ?
+                            { translateY: `-50px`, opacity: 0 } :
+                            { translateY: `40px`, opacity: 1 }}>
 
-                    <motion.p
-                        
-                        animate={
-                            isHovered ? { translateY: `0px` } : { translateY: `5px` }
-                        }
+                        <p className={`text-2xl font-bold text-center text-slate-200 `}>{props.title}</p>
+                        {props.url && <p className={`text-center`}>{props.url}</p>}
+                    </motion.div>
 
-                        className={`text-center text-xsm`}>
+                    {/* show when above is hidden */}
+                    <motion.div
+                        animate={isHovered ?
+                            { translateY: `-30px`, opacity: 1 } :
+                            { translateY: `70px`, opacity: 0 }}
+
+                        className={`text-center text-xsm px-2 relative top-4`}>
+
+                        <h2 className={``}>{props.description && props.description}</h2>
+                        <h2 className={`font-bold mt-2`}>built with:</h2>
                         {props.technology_used}
-                    </motion.p>
+
+                        <div className={`flex flex-row gap-3 justify-center mt-2`}>
+                            <FaEye size={25} />
+                            <FaGithub size={25} />
+                        </div>
+                    </motion.div>
+
                     {/* <FaChevronCircleDown size={30} className={` self-center`} /> */}
 
                 </motion.div>

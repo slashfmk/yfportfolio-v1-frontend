@@ -12,6 +12,7 @@ function CardXl(props: ICardXl) {
 
     return (
 
+
         <div className={`flex flex-col gap-4`}>
 
             <p className="text-center text-3xl font-bold">&ldquo;
@@ -31,6 +32,7 @@ function CardXl(props: ICardXl) {
                 <h2 className="text-sm text-center">{props.author}</h2>
                 <h2 className="text-lg text-center font-bold">{props.company ?? ''}</h2>
             </div>
+
         </div>
 
     )

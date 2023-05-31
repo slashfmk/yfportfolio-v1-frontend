@@ -47,7 +47,7 @@ export default async function Home() {
 
       <Section
         id={`thingsibuild`}
-        title={'Things I build'}
+        title={'My expertise'}
         position={`left`}
         description={`I build things that make people's lives easier`}>
 
