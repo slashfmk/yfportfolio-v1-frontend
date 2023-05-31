@@ -99,7 +99,7 @@ function Header() {
                         <div>
 
                             <h2 className={`text-5xl gradient-main font-extrabold text-center sm:text-left text-gray-200 mb-4`}>Who Am I?</h2>
-                            <div className="text-sm">
+                            <div className="">
                                 I am a US based software engineer graduated from Iowa State University.
                                 I have a passion for creating innovative solutions to complex problems and have worked on a variety of projects.
                             </div>
