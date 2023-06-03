@@ -27,7 +27,7 @@ function Section(props: ISection) {
                 whileInView={{ opacity: 1, translateX: '0px' }}
                 viewport={{ once: false, amount: 0.2 }}
 
-                className={`w-[1080px] mb-10 px-3 sm:px-0`}>
+                className={`w-[1080px] mb-10 px-3 sm:px-0 md:px-6`}>
 
                 <h2 className={`text-5xl font-extrabold text-gray-200 mb-2 text-center gradient-main`}>{props.title}</h2>
                 <p className={`mb-8 text-center`}>{props.description && props.description}</p>

@@ -13,7 +13,7 @@ function Footer() {
         id={`footer`}
             className={`w-full flex justify-center bg-[#101010] mb-0 pt-11`}>
 
-            <div className={`w-[1080px] mb-10 px-3 sm:px-0`}>
+            <div className={`w-[1080px] mb-10 px-3 sm:px-0 md:px-6`}>
 
                 <div className={`flex flex-row gap-5`}>
                     <Link href={"#"} target="_blank">
