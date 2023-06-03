@@ -4,7 +4,7 @@ import Section from './components/Section'
 import { Suspense } from 'react';
 import GitCard from './components/GitCard';
 
-import { FaAndroid, FaAngular, FaApple, FaFirefoxBrowser, FaHtml5, FaLaptop, FaLinux, FaMobile, FaReact, FaSafari, FaSass, FaWindows } from "react-icons/fa";
+import { FaAndroid, FaAngular, FaApple, FaHtml5, FaLaptop, FaLinux, FaMobile, FaReact, FaSafari, FaSass, FaWindows } from "react-icons/fa";
 import Card from './components/Card';
 import Service from './components/Service';
 import Footer from './components/Footer';
