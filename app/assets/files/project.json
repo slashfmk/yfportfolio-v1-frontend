@@ -2,33 +2,37 @@
   {
     "id": 1,
     "title": "Portfolio v.1",
-    "image": "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "url": "www.google.com",
-    "description": "Portfolio V2.1 showcases my skills as a Software Engineer. The website includes different animations and is designed to be mobile-friendly.",
-    "technology": "NextJS, Tailwind CSS, and a Sanity CMC"
+    "image": "yfv1.jpg",
+    "url": "https://www.yannickfumukani.com",
+    "github_url": "https://github.com/slashfmk/yfportfolio-v1-frontend",
+    "playstore_url": "",
+    "appstore_url": "",
+    "description": "Portfolio V1 showcases my skills as a Software Engineer. The website includes different animations and is designed to be mobile-friendly.",
+    "technology": "NextJS, Tailwind CSS",
+    "isdone": true
   },
   {
     "id": 2,
-    "title": "Cool stuff",
-    "image": "https://images.pexels.com/photos/242492/pexels-photo-242492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "url": "#",
-    "description": "Some details",
-    "technology": "ReactJs, Springboot, Tailwinds"
+    "title": "Brina hair beauty",
+    "image": "bhb.jpg",
+    "url": "https://brinahairbeauty.netlify.app",
+    "github_url": "https://github.com/slashfmk/brina-hb-frontend",
+    "playstore_url": "",
+    "appstore_url": "",
+    "description": "Brina hair beauty is a professional place for women's hair care",
+    "technology": "ReactJs, NodeJs, TailwindCss",
+    "isdone": true
   },
   {
     "id": 3,
-    "title": "Crazy ass",
-    "image": "https://images.pexels.com/photos/2142424/pexels-photo-2142424.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "url": "www.snipper.com",
+    "title": "Expensex",
+    "image": "expensesx.jpg",
+    "url": "",
+    "github_url": "https://github.com/slashfmk/Expensesx-mobile",
+    "playstore_url": "",
+    "appstore_url": "",
     "description": "This project has been developed to help people organize what they do on the daily basis",
-    "technology": "ReactJs, Springboot, Tailwinds"
-  },
-  {
-    "id": 4,
-    "title": "Women Webapp",
-    "image": "https://images.pexels.com/photos/3762806/pexels-photo-3762806.jpeg",
-    "url": "#",
-    "description": "",
-    "technology": "ReactJs, Springboot, Tailwinds"
+    "technology": "React Native, Springboot",
+    "isdone": false
   }
 ]

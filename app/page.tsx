@@ -4,7 +4,7 @@ import Section from './components/Section'
 import { Suspense } from 'react';
 import GitCard from './components/GitCard';
 
-import { FaAndroid, FaAngular, FaApple, FaHtml5, FaLaptop, FaLinux, FaMobile, FaReact, FaSafari, FaSass, FaWindows } from "react-icons/fa";
+import { FaAndroid, FaAngular, FaApple, FaArrowAltCircleRight, FaHtml5, FaLaptop, FaLinux, FaMobile, FaReact, FaSafari, FaSass, FaWindows } from "react-icons/fa";
 import Card from './components/Card';
 import Service from './components/Service';
 import Footer from './components/Footer';
@@ -108,7 +108,7 @@ export default async function Home() {
         position={`right`}
         description={`My technical skills include proficiency in a range of programming languages, as well as experience  with a variety of tools and frameworks.`}>
 
-        <div className={`flex flex-row gap-3 w-full flex-wrap`}>
+        <div className={`flex flex-row gap-10 w-full flex-wrap`}>
 
           <Classifier title={'Programming languages'} >
             <ul className={`w-full`}>
@@ -157,7 +157,7 @@ export default async function Home() {
         description={`Some of the work my hands can do`}
       >
 
-        <div className={`flex flex-row gap-2 flex-wrap justify-between`}>
+        <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 justify-between`}>
           {
             thingsBuilt.map((item: any) =>
               <Card
@@ -165,10 +165,13 @@ export default async function Home() {
                 key={item.id * 30}
                 title={item.title}
                 description={item.description}
-                image_url={item.image}
+                image_url={`/project/${item.image}`}
+                github_url={item.github_url}
+                playStore_url={item.playstore_url}
+                apple_store={``}
                 url={item.url}
                 technology_used={item.technology}
-              />)
+                isDone={item.isdone} />)
           }
         </div>
 
@@ -236,10 +239,22 @@ export default async function Home() {
 
       <Section
         id={`contact`}
-        title={'Contact me'}
+        title={`Anything I can help with?`}
         position={`right`}
         description={`Shoot me a message, so we can work together on anything you have`}
       >
+
+        <div className={`flex flex-col gap-5`}>
+
+          <div className={`flex flex-col justify-between gap-5 sm:flex-row`}>
+            <input type="text" name="fullname" placeholder="What's your name" className={`text-center sm:text-left`} />
+            <input type="email" name="email" placeholder="What is your email address" className={`text-center sm:text-left`} />
+          </div>
+
+          <textarea placeholder="How can I help you??" className={`text-center`}></textarea>
+
+          <button className={`bg-[#101010] hover:bg-green-600 hover:text-white transition-all duration-700 p-7 rounded-lg flex flex-row gap-6 justify-center my-2 w-full sm:max-w-xs self-center`}>Sent it to me <FaArrowAltCircleRight size={20} /></button>
+        </div>
 
       </Section>
 

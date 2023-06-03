@@ -8,8 +8,8 @@ interface IClassifier {
 function Classifier(props: IClassifier) {
     
     return (
-        <div className={`flex flex-col gap-3 sm:w-[350px] w-full`}>
-            <h2 className={`font-bold mb-3`}>{props.title}</h2>
+        <div className={`flex flex-col gap-1 sm:w-[350px] w-full`}>
+            <h2 className={`font-normal mb-3 text-lg`}>{props.title}</h2>
         {props.children}
 
       </div>

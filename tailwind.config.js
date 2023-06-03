@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./app/**/*.{js,ts,tsx,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        "md2": "767px"
+      }
+    },
     fontSize: {
       "xsm": "12px",
       "sm": "13px",

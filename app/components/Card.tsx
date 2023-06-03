@@ -17,6 +17,7 @@ interface ICard {
     description: string;
     image_url: string;
     technology_used: string;
+    isDone: boolean;
 }
 
 function Card(props: ICard) {
@@ -30,7 +31,7 @@ function Card(props: ICard) {
                 onMouseOver={() => setIsHovered(true)}
                 onMouseOut={() => setIsHovered(false)}
 
-                className={`sm:w-[350px] bg-cover bg-center overflow-clip w-full h-52 rounded-lg mb-2`}
+                className={`sm:min-w-[345px] bg-cover bg-center overflow-clip w-full h-52 rounded-lg mb-2`}
 
                 initial={{
                     backgroundSize: `100%`,
@@ -52,7 +53,7 @@ function Card(props: ICard) {
                 style={{
                     backgroundImage: `url(${props.image_url})`,
                     backgroundRepeat: "no-repeat",
-                    cursor: `pointer`
+
                 }}>
 
 
@@ -73,6 +74,13 @@ function Card(props: ICard) {
 
                         <p className={`text-2xl font-bold text-center text-slate-200 `}>{props.title}</p>
                         {props.url && <p className={`text-center`}>{props.url}</p>}
+                        {
+                            !props.isDone &&
+                            <p className="text-yellow-500 mt-1 rounded-xl self-center text-center">
+                                {`In construction`}
+                            </p>
+                        }
+
                     </motion.div>
 
                     {/* show when above is hidden */}
@@ -89,21 +97,21 @@ function Card(props: ICard) {
 
                         <div className={`flex flex-row gap-3 justify-center mt-2`}>
                             {
-                                props.url && <Link href={props.url} target="_blank" ><FaExternalLinkAlt size={25}/></Link>
-                            }
-                            
-                            {
-                                props.github_url && <Link href={props.github_url} target="_blank"><FaGithub size={25}/></Link>
+                                props.url && <Link href={props.url} target="_blank" ><FaExternalLinkAlt size={25} /></Link>
                             }
 
                             {
-                                props.playStore_url && <Link href={props.playStore_url} target="_blank"><FaAndroid size={25}/></Link>
+                                props.github_url && <Link href={props.github_url} target="_blank"><FaGithub size={25} /></Link>
+                            }
+
+                            {
+                                props.playStore_url && <Link href={props.playStore_url} target="_blank"><FaAndroid size={25} /></Link>
                             }
                             {
-                                props.apple_store && <Link href={props.apple_store} target="_blank"><FaApple size={25}/></Link>
+                                props.apple_store && <Link href={props.apple_store} target="_blank"><FaApple size={25} /></Link>
                             }
-                          
-                            
+
+
                         </div>
                     </motion.div>
 
