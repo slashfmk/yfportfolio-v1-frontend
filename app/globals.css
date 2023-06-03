@@ -74,8 +74,8 @@ body {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  font-size: large;
+  font-family: "montserrat", sans-serif;
+  font-size: small;
   color: rgb(var(--foreground-rgb));
   background: #171717;
   color: #bcb7b7;

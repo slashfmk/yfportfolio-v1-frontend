@@ -3,7 +3,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaChevronCircleDown, FaEye, FaGithub } from "react-icons/fa";
+import { FaAndroid, FaApple, FaChevronCircleDown, FaExternalLinkAlt, FaExternalLinkSquareAlt, FaEye, FaGithub } from "react-icons/fa";
+import Link from "next/link";
 
 
 interface ICard {
@@ -11,6 +12,8 @@ interface ICard {
     title: string;
     url?: string;
     github_url?: string;
+    playStore_url?: string;
+    apple_store?: string;
     description: string;
     image_url: string;
     technology_used: string;
@@ -85,8 +88,22 @@ function Card(props: ICard) {
                         {props.technology_used}
 
                         <div className={`flex flex-row gap-3 justify-center mt-2`}>
-                            <FaEye size={25} />
-                            <FaGithub size={25} />
+                            {
+                                props.url && <Link href={props.url} target="_blank" ><FaExternalLinkAlt size={25}/></Link>
+                            }
+                            
+                            {
+                                props.github_url && <Link href={props.github_url} target="_blank"><FaGithub size={25}/></Link>
+                            }
+
+                            {
+                                props.playStore_url && <Link href={props.playStore_url} target="_blank"><FaAndroid size={25}/></Link>
+                            }
+                            {
+                                props.apple_store && <Link href={props.apple_store} target="_blank"><FaApple size={25}/></Link>
+                            }
+                          
+                            
                         </div>
                     </motion.div>
 

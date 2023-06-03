@@ -28,9 +28,9 @@ const LineProgress: React.FC<ILineProgress> = (props) => {
     }
 
     return (
-        <div className={`flex flex-row `}>
+        <div className={`grid grid-cols-2 gap-4 w-full`}>
 
-            <div className={`flex flex-row w-44 min-w-max`}>
+            <div className={`flex flex-row justify-between`}>
 
             {props.title && <div className={`mr-2`}>{props.title}</div>}
             <div className="font-bold mr-2">{ props.percentage }%</div>
@@ -48,12 +48,6 @@ const LineProgress: React.FC<ILineProgress> = (props) => {
                         width: 0,
                         backgroundColor: colorControl(0)
                     }}
-    
-                    // animate={{
-                    //     opacity: 1,
-                    //     width: props.percentage + "%",
-                    //     backgroundColor: [colorControl(props.percentage)]
-                    // }}
 
                     whileInView={{
                         opacity: 1,
