@@ -108,7 +108,7 @@ function Card(props: ICard) {
                                 props.playStore_url && <Link href={props.playStore_url} target="_blank"><FaAndroid size={25} /></Link>
                             }
                             {
-                                props.apple_store && <Link href={props.apple_store} target="_blank"><FaApple size={25} /></Link>
+                                props.appStore_url&& <Link href={props.appStore_url} target="_blank"><FaApple size={25} /></Link>
                             }
 
 

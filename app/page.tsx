@@ -168,7 +168,7 @@ export default async function Home() {
                 image_url={`/project/${item.image}`}
                 github_url={item.github_url}
                 playStore_url={item.playstore_url}
-                appStore_url={``}
+                appStore_url={item.appstore_url}
                 url={item.url}
                 technology_used={item.technology}
                 isDone={item.isdone} />)
