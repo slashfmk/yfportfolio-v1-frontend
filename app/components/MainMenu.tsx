@@ -4,14 +4,19 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import { FaPlusCircle, FaBars } from "react-icons/fa";
+import { FaPlusCircle, FaBars, FaSort } from "react-icons/fa";
 
 
 function MainMenu() {
 
+    // Get the screen width
+    const hasWindow = typeof window !== 'undefined';
+    const width = hasWindow ? window.innerWidth : null;
+
     // Control the menu display
     const [isMenuDisplay, setIsMenuDisplay] = useState<boolean>(false);
     const route = useRouter();
+
 
     // close the menu once called
     function closeMenu(address: string) {
@@ -19,23 +24,21 @@ function MainMenu() {
         route.push(address);
     }
 
-    // Get the screen width
-    const hasWindow = typeof window !== 'undefined';
-    const width = hasWindow ? window.innerWidth : null;
 
-    useEffect(() => {
 
-    }, [width])
+    // useEffect(() => {
+
+    // }, [menuWidth])
 
     return (
         <>
 
-            <div className={`cursor-pointer z-50`} onClick={() => { setIsMenuDisplay(!isMenuDisplay) }} >
-                {isMenuDisplay ? <FaPlusCircle size={25} rotate={35} /> : <FaBars size={25} />}
+            <div className={`fixed top-6 right-3 cursor-pointer z-50`} onClick={() => { setIsMenuDisplay(!isMenuDisplay) }} >
+                {isMenuDisplay ? <FaPlusCircle size={25} className={`rotate-45 text-white`} /> : <FaBars size={25} />}
             </div>
 
             <motion.div
-                className={`block fixed w-screen h-screen bg-green-500 z-30 text-white font-bold text-2xl`}
+                className={`block fixed w-screen h-screen bg-green-500 z-40 text-white font-bold text-2xl`}
 
                 initial={{ opacity: 1, display: 'none', translateX: `${width}px` }}
                 transition={{ ease: "easeInOut", duration: .5 }}

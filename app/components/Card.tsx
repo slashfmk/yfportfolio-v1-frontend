@@ -13,7 +13,7 @@ interface ICard {
     url?: string;
     github_url?: string;
     playStore_url?: string;
-    apple_store?: string;
+    appStore_url?: string;
     description: string;
     image_url: string;
     technology_used: string;
@@ -31,7 +31,7 @@ function Card(props: ICard) {
                 onMouseOver={() => setIsHovered(true)}
                 onMouseOut={() => setIsHovered(false)}
 
-                className={`sm:min-w-[345px] bg-cover bg-center overflow-clip w-full h-52 rounded-lg mb-2`}
+                className={`bg-cover bg-center overflow-clip w-full h-52 rounded-lg mb-2`}
 
                 initial={{
                     backgroundSize: `100%`,
@@ -73,7 +73,7 @@ function Card(props: ICard) {
                             { translateY: `40px`, opacity: 1 }}>
 
                         <p className={`text-2xl font-bold text-center text-slate-200 `}>{props.title}</p>
-                        {props.url && <p className={`text-center`}>{props.url}</p>}
+                        {/* {props.url && <p className={`text-center`}>{props.url}</p>} */}
                         {
                             !props.isDone &&
                             <p className="text-yellow-500 mt-1 rounded-xl self-center text-center">

@@ -19,9 +19,9 @@ const LineProgress: React.FC<ILineProgress> = (props) => {
     // control the color based on percentage value
     function colorControl (value: number) {
         if (props.percentage < 50) {
-            return '#3368DC'
+            return '#323232'
         } else if (props.percentage >= 50 && props.percentage < 79) {
-            return '#33A444';
+            return '#424242';
         } else {
             return '#6A6A6A';
         }

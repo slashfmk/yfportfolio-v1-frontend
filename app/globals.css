@@ -124,6 +124,13 @@ input, textarea {
   border-bottom: solid #5c5c5c 1px;
 }
 
+input:focus, textarea:focus {
+  padding: 20px;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: solid rgba(6, 217, 103, 1) 1px;
+}
+
 .main-menu > li:hover {
   /* border-bottom: solid  #ffffff 8px; */
   display: inline-block;

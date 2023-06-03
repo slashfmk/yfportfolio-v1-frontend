@@ -2,27 +2,29 @@
 
 import Image from 'next/image'
 import profilePic from '../assets/images/yfprofile.jpg'
-import { FaArrowAltCircleDown, FaWindows } from 'react-icons/fa';
+import { FaArrowAltCircleDown, FaArrowAltCircleRight, FaWindows } from 'react-icons/fa';
 import Button from './Button';
 import ToTop from './ToTup';
 
 import PageProgressBar from './PageProgressBar';
 import MainMenu from './MainMenu';
+import Link from 'next/link';
 
 
 function Header() {
 
     return (
         <>
-
+           
             <PageProgressBar />
+            <MainMenu />
             <header className={`w-full flex justify-center px-6 sm:px-0 md:px-6`} id={`header`}>
 
                 <div className={`w-full  fixed p-3 z-20`}>
 
                     <div className="flex flex-row justify-between">
                         <div className="logo opacity-0"><FaWindows size={25} /></div>
-                        <MainMenu />
+                      
                     </div>
 
                 </div>
@@ -60,10 +62,14 @@ function Header() {
 
                             <div className={`self-center sm:self-start`}>
 
-                                <Button href={`/YF-redone-Resume.pdf`} target={`_blank`}>
-                                    <p>My Resume</p>
-                                    <FaArrowAltCircleDown size={20} />
-                                </Button>
+                                <Link href={`/YF-redone-Resume.pdf`} target={`_blank`} download>
+                                    <button
+                                        className={`bg-[#101010] 
+                                    hover:bg-green-600 hover:text-white transition-all duration-700
+                                    p-7 rounded-lg flex flex-row gap-6 justify-center my-2 w-full
+                                    sm:max-w-xs self-center`}>
+                                        Download Resume <FaArrowAltCircleDown size={20} /></button>
+                                </Link>
                             </div>
 
                         </div>

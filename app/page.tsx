@@ -108,14 +108,15 @@ export default async function Home() {
         position={`right`}
         description={`My technical skills include proficiency in a range of programming languages, as well as experience  with a variety of tools and frameworks.`}>
 
-        <div className={`flex flex-row gap-10 w-full flex-wrap`}>
+        {/* <div className={`flex flex-row gap-10 w-full flex-wrap`}> */}
+        <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 w-full flex-wrap`}>
 
           <Classifier title={'Programming languages'} >
             <ul className={`w-full`}>
               {
                 proficiencyData.languages.sort((a, b) => (a.percentage > b.percentage) ? -1 : 1).map((language: any) =>
-                  <li key={language.id * 76}>
-                    <LineProgress key={language.id * 66} percentage={language.percentage} title={language.name} />
+                  <li key={language.id}>
+                    <LineProgress key={language.id} percentage={language.percentage} title={language.name} />
                   </li>)
               }
             </ul>
@@ -126,8 +127,8 @@ export default async function Home() {
             <ul className={`w-full`}>
               {
                 proficiencyData.frameworks.sort((a, b) => (a.percentage > b.percentage) ? -1 : 1).map((language: any) =>
-                  <li key={language.id * 78}>
-                    <LineProgress key={language.id * 79} percentage={language.percentage} title={language.name} />
+                  <li key={language.id}>
+                    <LineProgress key={language.id} percentage={language.percentage} title={language.name} />
                   </li>)
               }
             </ul>
@@ -138,7 +139,7 @@ export default async function Home() {
             <ul className={`w-full`}>
               {
                 proficiencyData.tools.sort((a, b) => (a.percentage > b.percentage) ? -1 : 1).map((language: any) =>
-                  <li key={language.id * 93}>
+                  <li key={language.id}>
                     <LineProgress key={language.id * 34} percentage={language.percentage} title={language.name} />
                   </li>)
               }
@@ -149,10 +150,9 @@ export default async function Home() {
 
       </Section>
 
-
       <Section
         id={`projects`}
-        title={'Projects I have built'}
+        title={'Projects'}
         position={`left`}
         description={`Some of the work my hands can do`}
       >
@@ -162,13 +162,13 @@ export default async function Home() {
             thingsBuilt.map((item: any) =>
               <Card
                 id={item.id}
-                key={item.id * 30}
+                key={item.id}
                 title={item.title}
                 description={item.description}
                 image_url={`/project/${item.image}`}
                 github_url={item.github_url}
                 playStore_url={item.playstore_url}
-                apple_store={``}
+                appStore_url={``}
                 url={item.url}
                 technology_used={item.technology}
                 isDone={item.isdone} />)
@@ -186,7 +186,7 @@ export default async function Home() {
         <div className={`flex flex-row gap-1 flex-wrap align-middle justify-between`}>
           <Suspense fallback={<div>Loading repos ...</div>}>
             {reposData.filter((rp: any) => !rp.fork).map((repo: any) => <GitCard
-              key={repo.id * 22}
+              key={repo.id}
               id={repo.id}
               name={repo.name}
               url={repo.html_url}
@@ -210,12 +210,13 @@ export default async function Home() {
           <ul className={`flex flex-row self-center p-3 w-max rounded-full`}>
             {
               testimony.map((testy: any) =>
-                <li key={testy.id * 122}>
+                <li key={testy.id}>
                   <div className={`relative mr-[-1.5rem] hover:z-10 hover:scale-150 duration-700 transition-all`}>
                     <Image
-                      key={testy.id * 88}
+                      key={testy.id}
                       src={`/photos/${testy.photo}`}
                       width={60} height={60} alt={''}
+                      priority={true}
                       className={`rounded-full border-4 border-[#171717]`} />
                   </div>
                 </li>)
@@ -226,7 +227,7 @@ export default async function Home() {
 
             {
               testimonyData.map((testy: any) =>
-                <CardXl key={testy.id * 1050} photoUrl={`/photos/${testy.photo}`} author={testy.author} company={testy.company}>
+                <CardXl key={testy.id} photoUrl={`/photos/${testy.photo}`} author={testy.author} company={testy.company}>
                   {testy.comment}
                 </CardXl>)
             }
@@ -239,22 +240,28 @@ export default async function Home() {
 
       <Section
         id={`contact`}
-        title={`Anything I can help with?`}
+        title={`Contact me`}
         position={`right`}
-        description={`Shoot me a message, so we can work together on anything you have`}
+        description={`Anything I can help with?? Let me know, so we can work together on it`}
       >
 
-        <div className={`flex flex-col gap-5`}>
+
+        <form action={`#`} className={`flex flex-col gap-5`}>
 
           <div className={`flex flex-col justify-between gap-5 sm:flex-row`}>
-            <input type="text" name="fullname" placeholder="What's your name" className={`text-center sm:text-left`} />
-            <input type="email" name="email" placeholder="What is your email address" className={`text-center sm:text-left`} />
+            <input type="text" name="fullname" placeholder="What's your name" className={`text-center sm:text-left`} required />
+            <input type="email" name="email" placeholder="What is your email address" className={`text-center sm:text-left`} required />
           </div>
 
-          <textarea placeholder="How can I help you??" className={`text-center`}></textarea>
+          <textarea
+            placeholder="Hello!, I think we need a mobile or web app for our company"
+            className={`text-center`} required>
+          </textarea>
 
-          <button className={`bg-[#101010] hover:bg-green-600 hover:text-white transition-all duration-700 p-7 rounded-lg flex flex-row gap-6 justify-center my-2 w-full sm:max-w-xs self-center`}>Sent it to me <FaArrowAltCircleRight size={20} /></button>
-        </div>
+          <button className={`bg-[#101010] hover:bg-green-600 hover:text-white transition-all duration-700 p-7 rounded-lg flex flex-row gap-6 justify-center my-2 w-full sm:max-w-xs self-center`}>
+            Send your message
+            <FaArrowAltCircleRight size={20} /></button>
+        </form>
 
       </Section>
 
