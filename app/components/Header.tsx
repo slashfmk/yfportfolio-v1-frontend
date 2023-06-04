@@ -2,40 +2,39 @@
 
 import Image from 'next/image'
 import profilePic from '../assets/images/yfprofile.jpg'
-import { FaArrowAltCircleDown, FaArrowAltCircleRight, FaWindows } from 'react-icons/fa';
-import Button from './Button';
+import { FaArrowAltCircleDown, FaWindows } from 'react-icons/fa';
 import ToTop from './ToTup';
 
 import PageProgressBar from './PageProgressBar';
+
 import MainMenu from './MainMenu';
 import Link from 'next/link';
+
+import Head from 'next/head';
 
 
 function Header() {
 
     return (
         <>
-           
+            <Head key={1}>
+                <title>Yannick Fumukani official website</title>
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
+
             <PageProgressBar />
             <MainMenu />
             <header className={`w-full flex justify-center px-6 sm:px-0 md:px-6`} id={`header`}>
 
-                <div className={`w-full  fixed p-3 z-20`}>
+                {/* <div className={`w-full  fixed p-3 z-20`}>
 
                     <div className="flex flex-row justify-between">
-                        <div className="logo opacity-0"><FaWindows size={25} /></div>
+                        <div className="logo opacity-1"><FaWindows size={25} /></div>
                       
                     </div>
 
-                </div>
-
-
-
-                {/* Menu pop over */}
-
-
-                {/* Top bar stuff */}
-
+                </div> */}
 
                 <div className={`w-[1080px] my-[45px]`}>
 
@@ -80,6 +79,7 @@ function Header() {
                             height={500}
                             alt={`Yannick Slash Fumukani`}
                             src={profilePic}
+                            priority={true}
                         />
 
                     </div>

@@ -3,7 +3,7 @@
 
 import { motion, AnimatePresence } from "framer-motion"
 import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FaPlusCircle, FaBars, FaSort } from "react-icons/fa";
 
 
@@ -25,11 +25,6 @@ function MainMenu() {
     }
 
 
-
-    // useEffect(() => {
-
-    // }, [menuWidth])
-
     return (
         <>
 
@@ -46,7 +41,7 @@ function MainMenu() {
                     { opacity: 1, display: 'block', translateX: '0px' } :
                     { opacity: 1, display: 'block', translateX: `${width}px` }}
 
-                exit={{ opacity: 1, display: 'none', translateX: `${width}px` }}>
+                exit={{ opacity: 0, display: 'none', translateX: `${width}px` }}>
 
                 <AnimatePresence >
                     <motion.ul className={`flex flex-col gap-6 h-full justify-center text-center main-menu`}>

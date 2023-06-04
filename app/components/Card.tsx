@@ -111,7 +111,6 @@ function Card(props: ICard) {
                                 props.appStore_url&& <Link href={props.appStore_url} target="_blank"><FaApple size={25} /></Link>
                             }
 
-
                         </div>
                     </motion.div>
 

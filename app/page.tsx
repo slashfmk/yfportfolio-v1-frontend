@@ -13,7 +13,7 @@ import projects from './assets/files/project.json';
 import proficiency from './assets/files/proficiency.json';
 import testimony from './assets/files/testimony.json';
 
-import LineProgress from './LineProgress';
+import LineProgress from './components/LineProgress';
 import Classifier from './components/Classifier';
 import CardXlCarousel from './components/CardXlCarousel';
 import CardXl from './components/CardXl';

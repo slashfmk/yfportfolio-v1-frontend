@@ -1,4 +1,4 @@
-import LineProgress from "../LineProgress";
+import LineProgress from "./LineProgress";
 
 interface IClassifier {
     title: string;
