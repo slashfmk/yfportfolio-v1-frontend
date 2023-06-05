@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import profilePic from '../assets/images/yfprofile.jpg'
-import { FaArrowAltCircleDown, FaWindows } from 'react-icons/fa';
+import { FaArrowAltCircleDown } from 'react-icons/fa';
 import ToTop from './ToTup';
 
 import PageProgressBar from './PageProgressBar';

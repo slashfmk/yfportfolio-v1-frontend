@@ -1,38 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1>Yannick Fumukani | portfolio v.1</h1>
+<hr>
+<p>
+Welcome to my public portfolio repository! This repository serves as a showcase of my skills, projects, and accomplishments as a Software Engineer. Here, you will find a collection of my work that demonstrates my expertise and creativity in various domains. 
+</p>
+<h2>Technologies used: </h2>
+<ul>
+<li>NextJs 13.1</li>
+<li>Tailwind CSS</li>
+<li>Framer motion</li>
+<li>Nuka carousel</li>
+<li>Typescript</li>
+</ul>
 
-## Getting Started
+<hr>
 
-First, run the development server:
+<h2>Skills and technologies:</h2>
+<ul>
+<li>Programming Languages: SQL, Java, Python, Swift, C#, Javascript, Typescript, Html, CSS/SCSS, C/C++, Shell
+</li>
+<li>Web Development: HTML, CSS, JavaScript, React, Angular, Node.js, etc.</li>
+<li>Database Management: MySQL, MongoDB, PostgreSQL, etc.</li>
+<li>Mobile Development: Android, iOS, React Native</li>
+<li>Others: Linux, Docker, AWS, Figma etc.</li>
+</ul>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+<h3>Portfolio url: <a href="https://www.yannickfumukani.com">www.yannickfumukani.com</a></h3>
+<img src="./public/photos/YFP2.jpeg">
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h2>Limitations</h2>
+<p>
+This project is not meant to be used without permission, if you feel like using it please contact me at slashcs7@hotmail.com
+</p>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<h2>Getting in touch</h2>
+<p>
+If you have any questions, feedback, or would like to collaborate on a project, please feel free to reach out to me. You can contact me via email or connect with me on LinkedIn, where you can find additional information about my professional background and experience.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Thank you for visiting my portfolio repository, and I hope you enjoy exploring my work.
+</p>
