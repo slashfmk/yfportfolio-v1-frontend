@@ -202,7 +202,7 @@ export default async function Home() {
         id={`testimony`}
         title={'Testimony'}
         position={`left`}
-        description={`Trusted by many of people That I have worked with`}
+        description={`What people say about my work`}
       >
 
         <div className={`flex flex-col gap-12 rounded-xl`}>
