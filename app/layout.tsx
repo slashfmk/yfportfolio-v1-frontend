@@ -1,4 +1,4 @@
-import { Montserrat} from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import './globals.css'
 
 const montserrat = Montserrat({
@@ -6,7 +6,7 @@ const montserrat = Montserrat({
   variable: '--font-montserrat',
   display: 'swap',
 });
- 
+
 
 export default function RootLayout({
   children,

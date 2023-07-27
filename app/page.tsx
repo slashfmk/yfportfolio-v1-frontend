@@ -1,22 +1,23 @@
-import Image from 'next/image'
-import Header from './components/Header'
-import Section from './components/Section'
+import Image from 'next/image';
 import { Suspense } from 'react';
 import GitCard from './components/GitCard';
+import Header from './components/Header';
+import Section from './components/Section';
 
 import { FaAndroid, FaAngular, FaApple, FaArrowAltCircleRight, FaHtml5, FaLaptop, FaLinux, FaMobile, FaReact, FaSafari, FaSass, FaWindows } from "react-icons/fa";
 import Card from './components/Card';
-import Service from './components/Service';
 import Footer from './components/Footer';
+import Service from './components/Service';
 
-import projects from './assets/files/project.json';
 import proficiency from './assets/files/proficiency.json';
+import projects from './assets/files/project.json';
 import testimony from './assets/files/testimony.json';
 
-import LineProgress from './components/LineProgress';
-import Classifier from './components/Classifier';
-import CardXlCarousel from './components/CardXlCarousel';
 import CardXl from './components/CardXl';
+import CardXlCarousel from './components/CardXlCarousel';
+import Classifier from './components/Classifier';
+import LineProgress from './components/LineProgress';
+import Head from 'next/head';
 
 
 async function getData() {
@@ -42,7 +43,6 @@ export default async function Home() {
   return (
 
     <>
-
       <Header />
 
       <Section
