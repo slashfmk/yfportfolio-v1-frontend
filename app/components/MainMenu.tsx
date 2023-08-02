@@ -35,7 +35,7 @@ function MainMenu() {
             <motion.div
                 className={`block fixed w-full h-screen bg-green-500 z-40 text-white font-bold text-2xl`}
 
-                initial={{ opacity: 1, display: 'none', translateX: `${width}px` }}
+                initial={{ opacity: 1, display: 'none', translateX: `0px` }}
                 transition={{ ease: "easeInOut", duration: .5 }}
                 animate={isMenuDisplay ?
                     { opacity: 1, display: 'block', translateX: '0px' } :
