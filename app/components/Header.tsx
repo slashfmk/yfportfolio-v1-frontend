@@ -36,14 +36,14 @@ function Header() {
 
                 </div> */}
 
-                <div className={`w-screen sm:w-[1080px] my-[45px]`}>
+                <div className={`w-full sm:w-[1080px] my-[45px]`}>
 
                     {/* To the top button here */}
                     <ToTop />
 
                     <p className="text-4xl font-light text-center sm:text-left">Hey! My name is</p>
 
-                    <h1 className={`text-6xl sm:text-7xl font-black gradient-main text-center sm:text-left leading-tight`}>Yannick Fumukani</h1>
+                    <h1 className={`text-[4rem] sm:text-7xl font-black gradient-main text-center sm:text-left leading-tight`}>Yannick Fumukani</h1>
 
                     <div className={`flex sm:flex-row md:gap-4 gap-48  flex-col-reverse`}>
 
@@ -74,7 +74,7 @@ function Header() {
                         </div>
 
                         <Image
-                            className={`w-screen rounded-full border-8 m-1 sm:m-2 self-center`}
+                            className={`w-screen sm:w-[500px] rounded-full border-8 m-1 sm:m-2 self-center`}
                             width={500}
                             // height={500}
                             alt={`Yannick Slash Fumukani`}

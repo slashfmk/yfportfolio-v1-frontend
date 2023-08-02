@@ -35,16 +35,17 @@ function MainMenu() {
             <motion.div
                 className={`block fixed w-full h-screen bg-green-500 z-40 text-white font-bold text-2xl`}
 
-                initial={{ opacity: 1, display: 'none', translateX: `0px` }}
+                initial={{ opacity: 0, display: 'none', translateX: `${width}px` }}
                 transition={{ ease: "easeInOut", duration: .5 }}
                 animate={isMenuDisplay ?
                     { opacity: 1, display: 'block', translateX: '0px' } :
-                    { opacity: 1, display: 'block', translateX: `${width}px` }}
+                    { opacity: 0, display: 'block', translateX: `${width}px` }}
 
-                exit={{ opacity: 0, display: 'none', translateX: `${width}px` }}>
+                exit={{ opacity: 0, display: 'none', translateX: `${width}px` }}
+            >
 
                 <AnimatePresence >
-                    <motion.ul className={`flex flex-col gap-6 h-full justify-center text-center main-menu`}>
+                    <motion.ul className={`flex flex-col gap-6 h-full justify-center items-center text-center main-menu`}>
 
                         <li key={77} onClick={() => { closeMenu("/#header") }}>Who Am I?</li>
                         <li key={32} onClick={() => { closeMenu("/#thingsibuild") }}>Things I build</li>
