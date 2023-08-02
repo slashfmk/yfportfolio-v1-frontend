@@ -20,14 +20,14 @@ function Section(props: ISection) {
     }
     
     return (
-        <section className={`w-full flex justify-center my-16`} id={props.id}>
+        <section className={`w-screen flex justify-center my-16`} id={props.id}>
             <motion.div
                 
                 initial={{ opacity: 0, translateX: pos() }}
                 whileInView={{ opacity: 1, translateX: '0px' }}
                 viewport={{ once: false, amount: 0.2 }}
 
-                className={`w-[1080px] mb-10 px-3 sm:px-6 md:px-6`}>
+                className={`w-screen sm:w-[1080px] mb-10 px-3 sm:px-6 md:px-6`}>
 
                 <h2 className={`text-5xl font-extrabold text-gray-200 mb-2 text-center gradient-main`}>{props.title}</h2>
                 <p className={`mb-5 text-center`}>{props.description && props.description}</p>

@@ -121,6 +121,14 @@ a {
   cursor: pointer;
 }
 
+.main-menu > li:hover {
+  /* border-bottom: solid  #ffffff 8px; */
+  display: inline-block;
+  padding: 0px 0px 4px 0px;
+ transform: translateX(-25px);
+ transition: all .5s;
+}
+
 input, textarea {
   padding: 20px;
   width: 100%;
@@ -135,13 +143,7 @@ input:focus, textarea:focus {
   border-bottom: solid rgba(6, 217, 103, 1) 1px;
 }
 
-.main-menu > li:hover {
-  /* border-bottom: solid  #ffffff 8px; */
-  display: inline-block;
-  padding: 0px 0px 4px 0px;
- transform: translateX(-25px);
- transition: all .5s;
-}
+
 
 @media (prefers-color-scheme: dark) {
   html {

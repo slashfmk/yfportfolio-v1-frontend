@@ -265,11 +265,6 @@ export default async function Home() {
 
       </Section>
 
-
-      <main>
-
-      </main>
-
       <Footer />
     </>
   )

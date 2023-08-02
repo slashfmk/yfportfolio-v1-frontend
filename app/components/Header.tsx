@@ -25,7 +25,7 @@ function Header() {
 
             <PageProgressBar />
             <MainMenu />
-            <header className={`w-full flex justify-center px-6 sm:px-0 md:px-6`} id={`header`}>
+            <header className={`w-screen flex justify-center px-6 sm:px-0 md:px-6`} id={`header`}>
 
                 {/* <div className={`w-full  fixed p-3 z-20`}>
 
@@ -36,7 +36,7 @@ function Header() {
 
                 </div> */}
 
-                <div className={`w-[1080px] my-[45px]`}>
+                <div className={`w-screen sm:w-[1080px] my-[45px]`}>
 
                     {/* To the top button here */}
                     <ToTop />
@@ -74,9 +74,9 @@ function Header() {
                         </div>
 
                         <Image
-                            className={`rounded-full border-8 m-1 sm:m-2 self-center`}
+                            className={`w-screen rounded-full border-8 m-1 sm:m-2 self-center`}
                             width={500}
-                            height={500}
+                            // height={500}
                             alt={`Yannick Slash Fumukani`}
                             src={profilePic}
                             priority={true}
