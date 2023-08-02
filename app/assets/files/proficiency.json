@@ -79,6 +79,11 @@
       "percentage": 97
     },
     {
+      "id": 20,
+      "name": "Angular",
+      "percentage": 97
+    },
+    {
       "id": 15,
       "name": "SwiftUI",
       "percentage": 81
