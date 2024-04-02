@@ -17,7 +17,6 @@ import CardXl from './components/CardXl';
 import CardXlCarousel from './components/CardXlCarousel';
 import Classifier from './components/Classifier';
 import LineProgress from './components/LineProgress';
-import Head from 'next/head';
 
 
 async function getData() {

@@ -1,11 +1,9 @@
-
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion"
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaPlusCircle, FaBars, FaSort } from "react-icons/fa";
-
 
 function MainMenu() {
 
@@ -16,7 +14,6 @@ function MainMenu() {
     // Control the menu display
     const [isMenuDisplay, setIsMenuDisplay] = useState<boolean>(false);
     const route = useRouter();
-
 
     // close the menu once called
     function closeMenu(address: string) {

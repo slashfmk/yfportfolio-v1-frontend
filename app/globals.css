@@ -34,8 +34,8 @@
   margin: 0;
 }
 
-
-body, html {
+body,
+html {
   /* width: 100vw; */
   scroll-behavior: smooth;
   max-width: 100%;
@@ -46,7 +46,6 @@ body, html {
   background: #171717;
   color: #bcb7b7;
 }
-
 
 a {
   color: inherit;
@@ -74,7 +73,7 @@ a {
 .text-stroke {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: #c1b8b8;
-  -webkit-text-stroke-width: 1px; 
+  -webkit-text-stroke-width: 1px;
 }
 
 .main-menu > li {
@@ -82,7 +81,7 @@ a {
   display: inline-block;
   padding: 0px 0px 4px 0px;
   transform: translateX(0px);
-  transition: all .5s;
+  transition: all 0.5s;
   cursor: pointer;
 }
 
@@ -90,18 +89,20 @@ a {
   /* border-bottom: solid  #ffffff 8px; */
   display: inline-block;
   padding: 0px 0px 4px 0px;
- transform: translateX(-25px);
- transition: all .5s;
+  transform: translateX(-25px);
+  transition: all 0.5s;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 20px;
   width: 100%;
   background-color: transparent;
   border-bottom: solid #5c5c5c 1px;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   padding: 20px;
   width: 100%;
   background-color: transparent;

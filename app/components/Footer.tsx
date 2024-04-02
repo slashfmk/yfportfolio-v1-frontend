@@ -1,6 +1,5 @@
-import { FaBehance, FaFacebookF, FaGithub, FaGlobeAmericas, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
-import Section from "./Section";
 import Link from "next/link";
+import { FaBehance, FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 
 function Footer() {
@@ -40,7 +39,7 @@ function Footer() {
 
                     <div className={`flex flex-row flex-wrap justify-between`}>
 
-                        <p>Yannick Slash Fumukani &copy; 2023 All right reserve </p>
+                        <p>&copy; Yannick Fumukani - 2024 All right reserve </p>
 
                         {/* <div className={`flex flex-row gap-3`}>
                             <FaGlobeAmericas size={19} />
